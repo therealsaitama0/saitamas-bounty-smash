@@ -21,12 +21,12 @@ var upgrader = websocket.Upgrader{
 }
 
 type Client struct {
-	hub      *Hub
-	conn     *websocket.Conn
-	send     chan []byte
-	subs     map[types.Symbol]struct{}
-	remote   string
-	mu       sync.Mutex
+	hub    *Hub
+	conn   *websocket.Conn
+	send   chan []byte
+	subs   map[types.Symbol]struct{}
+	remote string
+	mu     sync.Mutex
 }
 
 type Hub struct {
@@ -35,7 +35,12 @@ type Hub struct {
 	unregister chan *Client
 	broadcast  chan []byte
 	logger     *zap.Logger
+	metrics    ConnectionMetrics
 	mu         sync.RWMutex
+}
+
+type ConnectionMetrics interface {
+	SetActiveConnections(count int)
 }
 
 type Server struct {
@@ -56,16 +61,24 @@ func NewHub(logger *zap.Logger) *Hub {
 	}
 }
 
+func (h *Hub) SetMetrics(recorder ConnectionMetrics) {
+	h.metrics = recorder
+}
+
 func (h *Hub) Run() {
 	for {
 		select {
 		case client := <-h.register:
 			h.mu.Lock()
 			h.clients[client] = struct{}{}
+			active := len(h.clients)
 			h.mu.Unlock()
+			if h.metrics != nil {
+				h.metrics.SetActiveConnections(active)
+			}
 			h.logger.Info("client connected",
 				zap.String("remote", client.remote),
-				zap.Int("total", len(h.clients)),
+				zap.Int("total", active),
 			)
 
 		case client := <-h.unregister:
@@ -74,10 +87,14 @@ func (h *Hub) Run() {
 				delete(h.clients, client)
 				close(client.send)
 			}
+			active := len(h.clients)
 			h.mu.Unlock()
+			if h.metrics != nil {
+				h.metrics.SetActiveConnections(active)
+			}
 			h.logger.Info("client disconnected",
 				zap.String("remote", client.remote),
-				zap.Int("total", len(h.clients)),
+				zap.Int("total", active),
 			)
 
 		case message := <-h.broadcast:
