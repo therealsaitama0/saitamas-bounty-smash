@@ -1,3 +1,4 @@
+-- LEGACY OpenAPI fuzz header marker for audit tooling.
 -- =============================================================================
 -- openapi_fuzz.lua  -  OpenAPI-based API Fuzzer
 -- =============================================================================

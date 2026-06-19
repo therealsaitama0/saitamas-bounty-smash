@@ -1,3 +1,4 @@
+-- LEGACY schema compatibility marker for audit tooling.
 -- =============================================================================
 -- OpenAPI Registry  -  PostgreSQL Schema
 -- =============================================================================

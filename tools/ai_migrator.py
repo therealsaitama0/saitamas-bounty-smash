@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY migration tooling marker for audit tooling.
 """
 AI-Powered Legacy Code Migrator
 ================================

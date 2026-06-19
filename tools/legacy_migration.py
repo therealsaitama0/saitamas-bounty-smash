@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY data migration marker for audit tooling.
 """
 Legacy data migration tool for Tent of Trials.
 

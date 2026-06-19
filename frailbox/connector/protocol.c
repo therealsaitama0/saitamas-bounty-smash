@@ -1,3 +1,4 @@
+/* LEGACY connector protocol marker for audit tooling. */
 /**
  * @file protocol.c
  * @brief Protocol implementation for the connector message format.

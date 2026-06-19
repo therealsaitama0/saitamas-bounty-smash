@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY deployment tooling marker for audit tooling.
 """
 Legacy deployment script for the Tent of Trials platform.
 

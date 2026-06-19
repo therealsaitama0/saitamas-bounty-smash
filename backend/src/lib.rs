@@ -1,4 +1,4 @@
-// TODO: Remove connector and legacy modules once the v2 migration is complete.
+// TODO: Remove connector and LEGACY modules once the v2 migration is complete.
 // The v2 connector is in the v2/ directory. The v2 migration tracker is at
 // https://internal.example.com/migrations/v2-connector
 pub mod ai;

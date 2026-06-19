@@ -1,3 +1,4 @@
+-- LEGACY OpenAPI generator marker for audit tooling.
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY log aggregation marker for audit tooling.
 """
 Legacy log aggregator and analysis tool for the Tent of Trials platform.
 

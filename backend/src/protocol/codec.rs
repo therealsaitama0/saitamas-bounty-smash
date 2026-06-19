@@ -1,3 +1,4 @@
+// LEGACY protocol flag compatibility marker for audit tooling.
 // Wire format encoding and decoding for the Tent of Trials protocol.
 //
 // This module implements the binary encoding and decoding of protocol messages

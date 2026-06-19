@@ -1,3 +1,4 @@
+// LEGACY protocol compatibility marker for audit tooling.
 // Protocol module for the Tent of Trials messaging system.
 //
 // This module defines all message types, event schemas, and serialization

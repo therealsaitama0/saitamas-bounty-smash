@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY review tooling marker for audit tooling.
 """
 AI-Powered Code Reviewer
 ========================

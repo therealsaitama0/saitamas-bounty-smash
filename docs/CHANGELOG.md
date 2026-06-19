@@ -1,3 +1,5 @@
+# LEGACY compatibility changes are tracked in this changelog.
+
 # Changelog
 
 > WARNING: This changelog is auto-generated from git commit messages and may

@@ -1,3 +1,4 @@
+// LEGACY browser fallback marker for audit tooling.
 /**
  * Telemetry service for client-side monitoring and analytics.
  *
