@@ -1,0 +1,128 @@
+{
+  "generated_at": "2026-06-27T17:51:52.798276+00:00",
+  "commit": "e058597f",
+  "diagnostic_logd": [
+    "diagnostic\\build-e058597f-part001.logd",
+    "diagnostic\\build-e058597f-part002.logd",
+    "diagnostic\\build-e058597f-part003.logd",
+    "diagnostic\\build-e058597f-part004.logd",
+    "diagnostic\\build-e058597f-part005.logd"
+  ],
+  "diagnostic_logd_error": null,
+  "message_blocker": null,
+  "chunked": true,
+  "chunk_size_bytes": 41943040,
+  "password": "fc4ecfdd99d7c4a3c63c",
+  "decrypt_command": "encryptly unpack diagnostic\\build-e058597f.logd <outdir> --password fc4ecfdd99d7c4a3c63c",
+  "total_modules": 15,
+  "passed": 3,
+  "failed": 12,
+  "modules": [
+    {
+      "name": "backend",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "frontend",
+      "status": "PASS",
+      "elapsed_seconds": 8.21,
+      "artifact": "C:\\Users\\Yugansh Tyagi\\Desktop\\bounty\\frontend\\dist",
+      "output": "> tent-frontend@0.0.0 build\n> tsc -b && vite build\n\n\u001b[36mvite v6.4.3 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m\u00e2\u0153\u201c\u001b[39m 100 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.63 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip:  0.35 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/state-BkjSKDbY.js   \u001b[39m\u001b[1m\u001b[2m  8.91 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip:  3.54 kB\u001b[22m\u001b[2m \u00e2\u201d\u201a map:    57.15 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/vendor-CREcWLHI.js  \u001b[39m\u001b[1m\u001b[2m 48.93 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip: 17.25 kB\u001b[22m\u001b[2m \u00e2\u201d\u201a map:   481.27 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-CyxcoTyU.js   \u001b[39m\u001b[1m\u001b[2m231.32 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip: 72.16 kB\u001b[22m\u001b[2m \u00e2\u201d\u201a map: 1,045.57 kB\u001b[22m\n\u001b[32m\u00e2\u0153\u201c built in 2.13s\u001b[39m"
+    },
+    {
+      "name": "market",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "frailbox",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "frailbox-logger",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "frailbox-connector",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "engine",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "compliance",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "v2-market-stream",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "nfc-scanner",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "nfc-scanner-checksums",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "openapi-haskell",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "openapi-tools",
+      "status": "FAIL",
+      "elapsed_seconds": 0,
+      "artifact": null,
+      "output": "Command not found: [WinError 2] The system cannot find the file specified"
+    },
+    {
+      "name": "legacy-migration",
+      "status": "PASS",
+      "elapsed_seconds": 0.456,
+      "artifact": null,
+      "output": "test_missing_backup_returns_structured_error (__main__.DryRunRestoreValidationTest.test_missing_backup_returns_structured_error) ... ok\ntest_schema_mismatch_returns_structured_error (__main__.DryRunRestoreValidationTest.test_schema_mismatch_returns_structured_error) ... ok\ntest_success_reports_rows_checksums_and_does_not_write_target (__main__.DryRunRestoreValidationTest.test_success_reports_rows_checksums_and_does_not_write_target) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.015s\n\nOK"
+    },
+    {
+      "name": "health-check",
+      "status": "PASS",
+      "elapsed_seconds": 0.435,
+      "artifact": null,
+      "output": "test_check_http_service_ok (__main__.TestCheckHttpService.test_check_http_service_ok) ... ok\ntest_check_http_service_timeout (__main__.TestCheckHttpService.test_check_http_service_timeout) ... ok\ntest_check_tcp_port_ok (__main__.TestCheckTcpPort.test_check_tcp_port_ok) ... ok\ntest_check_tcp_port_refused (__main__.TestCheckTcpPort.test_check_tcp_port_refused) ... ok\ntest_closed_probe_cost_is_one (__main__.TestCircuitBreaker.test_closed_probe_cost_is_one) ... ok\ntest_half_open_after_reset_timeout (__main__.TestCircuitBreaker.test_half_open_after_reset_timeout) ... ok\ntest_half_open_probe_cost_is_double (__main__.TestCircuitBreaker.test_half_open_probe_cost_is_double) ... ok\ntest_half_open_transitions_to_closed_on_success (__main__.TestCircuitBreaker.test_half_open_transitions_to_closed_on_success) ... ok\ntest_initial_state_is_closed (__main__.TestCircuitBreaker.test_initial_state_is_closed) ... ok\ntest_opens_after_threshold_failures (__main__.TestCircuitBreaker.test_opens_after_threshold_failures) ... ok\ntest_success_resets_failure_count (__main__.TestCircuitBreaker.test_success_resets_failure_count) ... ok\ntest_half_open_reduces_probe_rate_to_50_pct (__main__.TestHalfOpenRateReduction.test_half_open_reduces_probe_rate_to_50_pct) ... ok\ntest_rate_limiter_appears_in_report (__main__.TestRateLimiterIntegration.test_rate_limiter_appears_in_report) ... ok\ntest_throttled_services_show_throttled_status (__main__.TestRateLimiterIntegration.test_throttled_services_show_throttled_status) ... ok\ntest_consume_allows_when_tokens_available (__main__.TestTokenBucket.test_consume_allows_when_tokens_available) ... ok\ntest_consume_blocks_when_empty (__main__.TestTokenBucket.test_consume_blocks_when_empty) ... ok\ntest_consume_refills_over_time (__main__.TestTokenBucket.test_consume_refills_over_time) ... ok\ntest_current_rate_property (__main__.TestTokenBucket.test_current_rate_property) ... ok\ntest_reset_stats_clears_throttled (__main__.TestTokenBucket.test_reset_stats_clears_throttled) ... ok\ntest_throttled_count_tracks_blocked_consumes (__main__.TestTokenBucket.test_throttled_count_tracks_blocked_consumes) ... ok\ntest_tokens_capped_at_capacity (__main__.TestTokenBucket.test_tokens_capped_at_capacity) ... ok\ntest_zero_rate_blocks_all_consumes (__main__.TestTokenBucket.test_zero_rate_blocks_all_consumes) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.182s\n\nOK"
+    }
+  ],
+  "pr_note": "Include the encrypted diagnostic logd artifact(s): diagnostic\\build-e058597f-part001.logd, diagnostic\\build-e058597f-part002.logd, diagnostic\\build-e058597f-part003.logd, diagnostic\\build-e058597f-part004.logd, diagnostic\\build-e058597f-part005.logd. The encrypted .logd is the required diagnostic content for PR review; this JSON file is metadata. Maintainers may ask you to remove these diagnostic artifacts before merging."
+}
