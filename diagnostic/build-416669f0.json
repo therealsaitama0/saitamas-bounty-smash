@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-06-27T18:38:37.306886+00:00",
+  "commit": "416669f0",
+  "diagnostic_logd": [
+    "diagnostic\\build-416669f0-part001.logd",
+    "diagnostic\\build-416669f0-part002.logd",
+    "diagnostic\\build-416669f0-part003.logd",
+    "diagnostic\\build-416669f0-part004.logd",
+    "diagnostic\\build-416669f0-part005.logd"
+  ],
+  "diagnostic_logd_error": null,
+  "message_blocker": null,
+  "chunked": true,
+  "chunk_size_bytes": 41943040,
+  "password": "0558c42ede4b8e417344",
+  "decrypt_command": "encryptly unpack diagnostic\\build-416669f0.logd <outdir> --password 0558c42ede4b8e417344",
+  "total_modules": 1,
+  "passed": 1,
+  "failed": 0,
+  "modules": [
+    {
+      "name": "health-check",
+      "status": "PASS",
+      "elapsed_seconds": 0.364,
+      "artifact": null,
+      "output": "test_check_http_service_ok (__main__.TestCheckHttpService.test_check_http_service_ok) ... ok\ntest_check_http_service_timeout (__main__.TestCheckHttpService.test_check_http_service_timeout) ... ok\ntest_check_tcp_port_ok (__main__.TestCheckTcpPort.test_check_tcp_port_ok) ... ok\ntest_check_tcp_port_refused (__main__.TestCheckTcpPort.test_check_tcp_port_refused) ... ok\ntest_closed_probe_cost_is_one (__main__.TestCircuitBreaker.test_closed_probe_cost_is_one) ... ok\ntest_half_open_after_reset_timeout (__main__.TestCircuitBreaker.test_half_open_after_reset_timeout) ... ok\ntest_half_open_probe_cost_is_double (__main__.TestCircuitBreaker.test_half_open_probe_cost_is_double) ... ok\ntest_half_open_transitions_to_closed_on_success (__main__.TestCircuitBreaker.test_half_open_transitions_to_closed_on_success) ... ok\ntest_initial_state_is_closed (__main__.TestCircuitBreaker.test_initial_state_is_closed) ... ok\ntest_opens_after_threshold_failures (__main__.TestCircuitBreaker.test_opens_after_threshold_failures) ... ok\ntest_success_resets_failure_count (__main__.TestCircuitBreaker.test_success_resets_failure_count) ... ok\ntest_half_open_reduces_probe_rate_to_50_pct (__main__.TestHalfOpenRateReduction.test_half_open_reduces_probe_rate_to_50_pct) ... ok\ntest_rate_limiter_appears_in_report (__main__.TestRateLimiterIntegration.test_rate_limiter_appears_in_report) ... ok\ntest_throttled_services_show_throttled_status (__main__.TestRateLimiterIntegration.test_throttled_services_show_throttled_status) ... ok\ntest_consume_allows_when_tokens_available (__main__.TestTokenBucket.test_consume_allows_when_tokens_available) ... ok\ntest_consume_blocks_when_empty (__main__.TestTokenBucket.test_consume_blocks_when_empty) ... ok\ntest_consume_refills_over_time (__main__.TestTokenBucket.test_consume_refills_over_time) ... ok\ntest_current_rate_property (__main__.TestTokenBucket.test_current_rate_property) ... ok\ntest_reset_stats_clears_throttled (__main__.TestTokenBucket.test_reset_stats_clears_throttled) ... ok\ntest_throttled_count_tracks_blocked_consumes (__main__.TestTokenBucket.test_throttled_count_tracks_blocked_consumes) ... ok\ntest_tokens_capped_at_capacity (__main__.TestTokenBucket.test_tokens_capped_at_capacity) ... ok\ntest_zero_rate_blocks_all_consumes (__main__.TestTokenBucket.test_zero_rate_blocks_all_consumes) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.171s\n\nOK"
+    }
+  ],
+  "pr_note": "Include the encrypted diagnostic logd artifact(s): diagnostic\\build-416669f0-part001.logd, diagnostic\\build-416669f0-part002.logd, diagnostic\\build-416669f0-part003.logd, diagnostic\\build-416669f0-part004.logd, diagnostic\\build-416669f0-part005.logd. The encrypted .logd is the required diagnostic content for PR review; this JSON file is metadata. Maintainers may ask you to remove these diagnostic artifacts before merging."
+}
