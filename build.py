@@ -93,7 +93,7 @@ MODULES = [
         name="frontend",
         language="TypeScript",
         dir=ROOT / "frontend",
-        build_cmd=["npm", "run", "build"],
+        build_cmd=["npm.cmd", "run", "build"] if os.name == "nt" else ["npm", "run", "build"],
         clean_cmd=["rm", "-rf", "node_modules", "dist"],
         build_dir=ROOT / "frontend" / "dist",
         env={"NODE_ENV": "production"},
@@ -113,6 +113,22 @@ MODULES = [
         build_cmd=["make"],
         clean_cmd=["make", "distclean"],
         build_dir=ROOT / "frailbox" / "frailbox",
+    ),
+    Module(
+        name="frailbox-logger",
+        language="C",
+        dir=ROOT / "frailbox",
+        build_cmd=["make", "test-logger-shutdown"],
+        clean_cmd=["make", "clean"],
+        build_dir=ROOT / "frailbox" / "build" / "tests" / "test_logger_shutdown",
+    ),
+    Module(
+        name="frailbox-connector",
+        language="C",
+        dir=ROOT / "frailbox",
+        build_cmd=["make", "test-connector-wait-all"],
+        clean_cmd=["make", "clean"],
+        build_dir=ROOT / "frailbox" / "build" / "tests" / "test_connector_wait_all",
     ),
     Module(
         name="engine",
@@ -147,6 +163,18 @@ MODULES = [
         build_dir=None,
     ),
     Module(
+        name="nfc-scanner-checksums",
+        language="Lua",
+        dir=ROOT / "frailbox" / "nfc",
+        build_cmd=[
+            "sh",
+            "-c",
+            "luac -p scanner.lua test_scanner_checksums.lua && lua test_scanner_checksums.lua",
+        ],
+        clean_cmd=["echo", "Lua has no build artifacts to clean"],
+        build_dir=None,
+    ),
+    Module(
         name="openapi-haskell",
         language="Haskell",
         dir=ROOT / "docs" / "openapi",
@@ -160,6 +188,22 @@ MODULES = [
         dir=ROOT / "tools",
         build_cmd=["luac", "-p", "openapi_diff.lua", "openapi_mock.lua", "openapi_pact.lua"],
         clean_cmd=["echo", "Nothing to clean"],
+        build_dir=None,
+    ),
+    Module(
+        name="legacy-migration",
+        language="Python",
+        dir=ROOT / "tools",
+        build_cmd=["python", "test_legacy_migration_dry_run.py"] if os.name == "nt" else ["python3", "test_legacy_migration_dry_run.py"],
+        clean_cmd=["echo", "Python has no build artifacts to clean"],
+        build_dir=None,
+    ),
+    Module(
+        name="health-check",
+        language="Python",
+        dir=ROOT / "tools",
+        build_cmd=["python", "test_health_check.py"] if os.name == "nt" else ["python3", "test_health_check.py"],
+        clean_cmd=["echo", "Python has no build artifacts to clean"],
         build_dir=None,
     ),
 ]
@@ -321,7 +365,7 @@ def build_module(
             print(f"       {color('npm install...', Colors.GRAY)}")
             try:
                 install_result = subprocess.run(
-                    ["npm", "install"],
+                    ["npm.cmd" if os.name == "nt" else "npm", "install"],
                     cwd=str(module.dir),
                     capture_output=not verbose,
                     text=True,
