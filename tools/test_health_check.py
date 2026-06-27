@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import sys
 import time
 import unittest
 from unittest.mock import patch, MagicMock
@@ -228,4 +229,10 @@ class TestHalfOpenRateReduction(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main(verbosity=2)
+    runner = unittest.TextTestRunner(verbosity=2)
+    suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])
+    result = runner.run(suite)
+    total = result.testsRun
+    passed = total - len(result.failures) - len(result.errors)
+    print(f"\n  health-check: {passed}/{total} tests passed")
+    sys.exit(0 if result.wasSuccessful() else 1)
