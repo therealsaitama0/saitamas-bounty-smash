@@ -8,6 +8,7 @@ interface HeaderProps {
 const navItems = [
   { label: 'Dashboard', path: '/' },
   { label: 'Analytics', path: '/analytics' },
+  { label: 'Contributors', path: '/contributors' },
   { label: 'Settings', path: '/settings' },
 ];
 
